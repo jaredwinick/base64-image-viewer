@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" ng-app="Base64ImageViewerApp">
+<head>
+  <meta charset="utf-8">
+  <title>Base64 Image Viewer</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/angular.min.js"></script>
+  <script src="js/controllers.js"></script>
+</head>
+<body ng-controller="Base64ImageViewerCtrl">
+
+<div class="panel panel-default">
+	<div class="panel-body">
+		<form role="form">
+			<div class="form-group">
+				<label for="base64ImageString">Base64 Image String</label>
+				<textarea class="form-control" id="base64ImageString" placeholder="data:image/png;base64,...." ng-model="base64ImageUrl" rows="5"></textarea>
+			</div>
+			<div class="form-group">
+				<label for="decodedImage">Image</label>
+				
+			</div>
+			<div class="form-group">
+				<img id="decodedImage" ng-src="{{base64ImageUrl}}">
+			</div>
+		</form>
+	</div>
+</div>
+
+</body>
+</html>
